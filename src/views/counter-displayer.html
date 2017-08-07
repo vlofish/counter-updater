@@ -1,0 +1,23 @@
+<body>
+<div id="navigation-pane" class="container-fluid animated {{ animObj['counter'] }}">
+
+  <div class="row col-lg-12" >
+
+    <div class="col-lg-2" ng-repeat="event in events track by $index">
+      <div class="thumbnail navzilla-thumbnail" ng-if="event.shelter !== 'n/a'">
+        <h4 style="text-align: center;">
+          {{ event.name }}
+        </h4>
+        <hr>
+        <img ng-src="{{ tymLogoSrc2 }}">  
+        <hr>
+        <h4 style="text-align: center;">
+          Lugares disponibles : {{ event.shelter }}
+        </h4>
+      </div>
+    </div>
+    
+  </div>
+
+</div>
+</body>

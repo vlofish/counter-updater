@@ -1,0 +1,29 @@
+{
+  "events" : {
+    "event00" : {
+      "id" : 0,
+      "name" : "Choose your event:",
+      "shelter" : 0
+    },
+    "event01" : {
+      "id" : 1,
+      "name" : "Event name 1",
+      "shelter" : 101
+    },
+    "event02" : {
+      "id" : 2,
+      "name" : "Event name 2",
+      "shelter" : 102
+    },
+    "event03" : {
+      "id" : 3,
+      "name" : "Event name 3",
+      "shelter" : 103
+    },
+    "event04" : {
+      "id" : 4,
+      "name" : "Event name 4",
+      "shelter" : 104
+    }
+  }
+}
