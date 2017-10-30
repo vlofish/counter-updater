@@ -33,12 +33,12 @@ angular.module('tym').constant('constants', {
 	REFERENCE02     : '/events/event0',
 	VAL             : 'value',
 	FIREBASE_CONFIG : { // Setup your firebase configuration here:
-		'apiKey'            : "",
-		'authDomain'        : "",
-		'databaseURL'       : "",
-		'projectId'         : "",
-		'storageBucket'     : "",
-		'messagingSenderId' : ""
+		'apiKey'            : "AIzaSyDOKarU2RCbZbRXKBncMITDumclZXcZHic",
+		'authDomain'        : "tym-counter-prod.firebaseapp.com",
+		'databaseURL'       : "https://tym-counter-prod.firebaseio.com",
+		'projectId'         : "tym-counter-prod",
+		'storageBucket'     : "tym-counter-prod.appspot.com",
+		'messagingSenderId' : "83775151898"
 	}
 
 });
