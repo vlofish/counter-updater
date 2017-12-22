@@ -1,5 +1,11 @@
 # Counter
-Counter for displaying available seats
+Counter for displaying available lodging for special events. 
+
+This app was born for helping a civil organization that helds several events. The events organized require lodging for the people that goes to these events. The events are announced in different web pages, so instead of going and update each page with the available lodging. These app updates from a single place the lodging for each event.
+
+
+
+
 # Pre-requisites!
 
   - Have node installed
