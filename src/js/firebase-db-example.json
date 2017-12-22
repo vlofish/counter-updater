@@ -1,10 +1,5 @@
 {
   "events" : {
-    "event00" : {
-      "id" : 0,
-      "name" : "Choose your event:",
-      "shelter" : 0
-    },
     "event01" : {
       "id" : 1,
       "name" : "Event name 1",
