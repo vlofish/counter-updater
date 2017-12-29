@@ -1,5 +1,12 @@
 # Counter
-Counter for displaying available seats
+Counter for displaying available lodging for special events. 
+
+This app was born for helping a civil organization that helds several events. The events organized offer lodging for the people that goes to these events. The issue solved here is that these events are displayed in four different web pages, so the counter-updater updates the available lodge for each event in each different website from the same place.
+
+The counter-displayer.html and the counterDisplayerCtrl.js are the codes spreaded throughout the other webpages for the counter-updater to be able to be linked with as many pages as necessary.
+
+Feel free to modify it in your own way.
+
 # Pre-requisites!
 
   - Have node installed
