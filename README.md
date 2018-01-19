@@ -19,6 +19,7 @@ This applicatio uses npm and gulp to run
 
 ```sh
 $ npm install
+$ npm install -g gulp-cli
 $ gulp server
 ```
 
