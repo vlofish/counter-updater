@@ -1,4 +1,5 @@
-angular.module('counterUpdater').constant('constants', {
+// angular.module('counterUpdater').constants('constants', globalData);
+angular.module('counterUpdater').value('constants', {
 	// Img src here:
 	TYM_LOGO_ICO : './img/logo_tym.ico',
 	TYM_LOGO_JPG : './img/tym_small.jpg',
@@ -32,13 +33,13 @@ angular.module('counterUpdater').constant('constants', {
 	REFERENCE01     : '/events/',
 	REFERENCE02     : '/events/event0',
 	VAL             : 'value',
-	FIREBASE_CONFIG : { // Setup your firebase configuration here:
-		'apiKey'            : "AIzaSyA0fvlxnG30K4dL91tvwyPdBVGYZrbaU6Y",
-		'authDomain'        : "counter-updater-dev.firebaseapp.com",
-		'databaseURL'       : "https://counter-updater-dev.firebaseio.com",
-		'projectId'         : "counter-updater-dev",
-		'storageBucket'     : "counter-updater-dev.appspot.com",
-		'messagingSenderId' : "960363066712"
-	}
+	// FIREBASE_CONFIG : { // Setup your firebase configuration here:
+	// 	'apiKey'            : "AIzaSyA0fvlxnG30K4dL91tvwyPdBVGYZrbaU6Y",
+	// 	'authDomain'        : "counter-updater-dev.firebaseapp.com",
+	// 	'databaseURL'       : "https://counter-updater-dev.firebaseio.com",
+	// 	'projectId'         : "counter-updater-dev",
+	// 	'storageBucket'     : "counter-updater-dev.appspot.com",
+	// 	'messagingSenderId' : "960363066712"
+	// }
 
 });
