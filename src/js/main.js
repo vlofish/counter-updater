@@ -1,1 +1,1 @@
-angular.module('tym', ['firebase']);
+angular.module('counterUpdater', ['firebase']);

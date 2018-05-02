@@ -1,4 +1,4 @@
-angular.module('tym').constant('constants', {
+angular.module('counterUpdater').constant('constants', {
 	// Img src here:
 	TYM_LOGO_ICO : './img/logo_tym.ico',
 	TYM_LOGO_JPG : './img/tym_small.jpg',

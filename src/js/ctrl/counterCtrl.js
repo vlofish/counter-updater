@@ -1,7 +1,7 @@
 (() => {
 	'use strict';
 
-	angular.module('tym').controller('counterCtrl', ['$firebaseObject', '$scope', '$controller', '$timeout', 'constants', ($firebaseObject, $scope, $controller, $timeout, constants) => {
+	angular.module('counterUpdater').controller('counterCtrl', ['$firebaseObject', '$scope', '$controller', '$timeout', 'constants', ($firebaseObject, $scope, $controller, $timeout, constants) => {
 
 		/**
 	     * Firebase needed configuration
