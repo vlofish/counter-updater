@@ -1,12 +1,12 @@
 (() => {
 	'use strict';
 
-	angular.module('counterUpdater').controller('counterCtrl', ['$firebaseObject', '$scope', '$controller', '$timeout', 'constants', ($firebaseObject, $scope, $controller, $timeout, constants) => {
+	angular.module('counterUpdater').controller('counterCtrl', ['$firebaseObject', '$scope', '$controller', '$timeout', 'constants', 'counterFcty', ($firebaseObject, $scope, $controller, $timeout, constants, counterFcty) => {
 
 		/**
 	     * Firebase needed configuration
 	     */
-		firebase.initializeApp(constants.FIREBASE_CONFIG);
+		// firebase.initializeApp(constants.FIREBASE_CONFIG);
 		$firebaseObject(firebase.database().ref().child(constants.REFERENCE00));
 
 		/**
@@ -85,11 +85,11 @@
 		/**
 		 * First call in all the app.
 		 */
-		$scope.init = () => {
+		function init() {		
 			$scope.domObj   = {};
 			$scope.animObj  = {};
 
-			getEventsFromAgenda();
+			getEventList();
 			setTextToDisplayInDOM($scope);
 	    	disableDom(true);
 
@@ -97,7 +97,7 @@
 			animationsAndDisplayabilityCtrl.displayOrHideDomObj(constants.UPDATE_SHELTERS_DIVS, true);
 		};
 
-		$scope.init();
+		init();
 
 		/**
 		 * Sets the default DOM texts and/or messages to be displayed in the DOM.
@@ -115,22 +115,13 @@
 
 	    /**
 	     * Get the names of the events and set them to the select box in the DOM.
-	     * Only until all events are loaded, theDOM will be shown.
+	     * Only until all events are loaded, theDOM will be shown. BUG WITH THIS-- CHECK IT
 	     */
-		function getEventsFromAgenda() {
-			let agendaEvents = [];
-
-			firebase.database().ref(constants.REFERENCE01).once(constants.VAL).then(function(snapshot) {
-		        for (let property in snapshot.val()) {
-		          agendaEvents.push(snapshot.val()[property]);
-		        }
-
-		        agendaEvents.unshift(constants.DEFAULT_EVENT);
-	        
-	        	$scope.events        = agendaEvents;
-				// $scope.eventSelected = agendaEvents[0];
+		function getEventList() {
+			counterFcty.getEventList().then(function(response) {
+				$scope.events = response;
 				$scope.displayLoader = false;
-	    	});
+			});
 		};
 
 		/**
