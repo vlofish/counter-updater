@@ -5,12 +5,12 @@ angular.module('counterUpdater').value('constants', {
 	TYM_LOGO_JPG : './img/tym_small.jpg',
 
 	// Texts names here:
-	COUNTER            : 'Contador',
-	SHELTERS_AVAILABLE : 'Hospedajes Disponibles:',
-	SHELTERS_UPDATE    : 'Actualizar Hospedaje.',
-	UPDATING           : 'Actualizando...',
-	SHELTERS_UPDATED   : 'Hospedaje actualizado exitosamente.',
-	NA_ARRAY           : ['n', '/', 'a'],
+	// COUNTER            : 'Contador',
+	// SHELTERS_AVAILABLE : 'Hospedajes Disponibles:',
+	// SHELTERS_UPDATE    : 'Actualizar Hospedaje.',
+	// UPDATING           : 'Actualizando...',
+	// SHELTERS_UPDATED   : 'Hospedaje actualizado exitosamente.',
+	// NA_ARRAY           : ['n', '/', 'a'],
 	ERROR_UPDATING     : 'Hubo un error al actualizar el contador. \n Captura esta pantalla y contacta a tu administrador del sistema.',
 
 	// Animations names here:
@@ -24,7 +24,7 @@ angular.module('counterUpdater').value('constants', {
 
 	// Default event displayed in the counter
 	DEFAULT_EVENT : {
-		name    : 'Escoge el evento por actualizar:', 
+		name    : 'Escoge el evento por actualizar:',
 		shelter : 'n/a'
 	},
 
