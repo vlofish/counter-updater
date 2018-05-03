@@ -1,7 +1,7 @@
 (() => {
 	'use strict';
 
-	angular.module('counterUpdater').controller('counterCtrl', ['$firebaseObject', '$scope', '$controller', '$timeout', 'constants', 'counterFcty', ($firebaseObject, $scope, $controller, $timeout, constants, counterFcty) => {
+	angular.module('counterUpdater').controller('counterCtrl', ['$firebaseObject', '$scope', '$controller', '$timeout', 'constants', 'textConstants', 'counterFcty', ($firebaseObject, $scope, $controller, $timeout, constants, textConstants, counterFcty) => {
 
 		/**
 	     * Firebase needed configuration
@@ -24,7 +24,7 @@
 
 	    /**
 	     * Activated when choosing a specific event from the select box.
-	     * If eventSelected is a real event, enable the DOM for its use. 
+	     * If eventSelected is a real event, enable the DOM for its use.
 	     * The number of houses are updated and displayed in the DOM.
 	     */
 		$scope.displayEventInfo = (eventSelected) => {
@@ -36,7 +36,7 @@
 
 			disableDom(boolean);
 			updateUICounter(eventSelected.shelter);
-			sheltersAvailable = eventSelected.shelter;			
+			sheltersAvailable = eventSelected.shelter;
 		};
 
 	    /**
@@ -85,15 +85,15 @@
 		/**
 		 * First call in all the app.
 		 */
-		function init() {		
+		function init() {
 			$scope.domObj   = {};
 			$scope.animObj  = {};
 
 			getEventList();
 			setTextToDisplayInDOM($scope);
-	    	disableDom(true);
+	    disableDom(true);
 
-	    	animationsAndDisplayabilityCtrl.setAnimation(constants.COUNTER_ANIM, constants.BOUNCE_IN);
+	    animationsAndDisplayabilityCtrl.setAnimation(constants.COUNTER_ANIM, constants.BOUNCE_IN);
 			animationsAndDisplayabilityCtrl.displayOrHideDomObj(constants.UPDATE_SHELTERS_DIVS, true);
 		};
 
@@ -103,20 +103,21 @@
 		 * Sets the default DOM texts and/or messages to be displayed in the DOM.
 		 */
 		function setTextToDisplayInDOM($scope) {
-			$scope.counterDOM      = constants.COUNTER;
-			$scope.sheltersDOM     = constants.SHELTERS_AVAILABLE;
-			$scope.firstNumberDOM  = constants.NA_ARRAY[0];
-	      	$scope.secondNumberDOM = constants.NA_ARRAY[1];
-	      	$scope.thirdNumberDOM  = constants.NA_ARRAY[2];
-	      	$scope.text01DOM       = constants.SHELTERS_UPDATE;
-	      	$scope.text02DOM       = constants.UPDATING;
-	      	$scope.text03DOM       = constants.SHELTERS_UPDATED;
+			$scope.counterTextInDOM      = textConstants.COUNTER;
+			$scope.sheltersTextInDOM     = textConstants.SHELTERS_AVAILABLE;
+			$scope.firstNumberTextInDOM  = textConstants.NA_ARRAY[0];
+    	$scope.secondNumberTextInDOM = textConstants.NA_ARRAY[1];
+    	$scope.thirdNumberTextInDOM  = textConstants.NA_ARRAY[2];
+    	$scope.text01DOM             = textConstants.SHELTERS_UPDATE;
+    	$scope.text02DOM             = textConstants.UPDATING;
+    	$scope.text03DOM             = textConstants.SHELTERS_UPDATED;
 		};
 
-	    /**
-	     * Get the names of the events and set them to the select box in the DOM.
-	     * Only until all events are loaded, theDOM will be shown. BUG WITH THIS-- CHECK IT
-	     */
+	  /**
+	   * Get the names of the events and set them to the select box in the DOM.
+		 *
+		 * TODO : There's a bug, the DOM is shown before the events are loaded.
+	   */
 		function getEventList() {
 			counterFcty.getEventList().then(function(response) {
 				$scope.events = response;
@@ -131,8 +132,8 @@
 		 */
 		function disableDom(boolean) {
 			$scope.disableIncreaseNumberDOM = boolean;
-	      	$scope.disableDecreaseNumberDOM = boolean;
-	      	$scope.disableUpdateSheltersDOM = boolean;
+	    $scope.disableDecreaseNumberDOM = boolean;
+	    $scope.disableUpdateSheltersDOM = boolean;
 		};
 
 	    /**
@@ -149,9 +150,9 @@
 				}
 			}
 
-			$scope.firstNumberDOM  = stringNumber[0];
-			$scope.secondNumberDOM = stringNumber[1];
-			$scope.thirdNumberDOM  = stringNumber[2];
+			$scope.firstNumberTextInDOM  = stringNumber[0];
+			$scope.secondNumberTextInDOM = stringNumber[1];
+			$scope.thirdNumberTextInDOM  = stringNumber[2];
 	    };
 
 
