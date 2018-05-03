@@ -2,7 +2,7 @@
 <div class="ng-cloak App-margin-bottom-m1">
 	<section id="signin_main" class="authenty signin-main white_background_color">
       <div class="section-content">
-        <div class="container">     
+        <div class="container">
           <div class="form-wrap">
             <div class="row">
               <div class="animated {{ animObj['counter'] }}">
@@ -11,9 +11,9 @@
 
                     <div>
                       <h1 id="trigo_font_style">
-                      	{{ counterDOM }}
+                      	{{ counterTextInDOM }}
                       </h1>
-                      <img id="tym_logo_position" ng-src="{{ tymLogoSrc }}">   
+                      <img id="tym_logo_position" ng-src="{{ tymLogoSrc }}">
                     </div>
 
                     <hr>
@@ -27,11 +27,11 @@
                         </div>
 
                         <div id="lugares_disponibles_margin">
-                          <strong> {{ sheltersDOM }} </strong>
+                          <strong> {{ sheltersTextInDOM }} </strong>
                         </div>
 
                         <div class="bloc-time" style="margin-left: 5%;">
-                            
+
                           <button id="button_up" class="figure button_background" ng-click="increaseNumber();" ng-disabled="disableIncreaseNumberDOM">
                             <i class="fa fa-chevron-up" aria-hidden="true"></i>
                           </button>
@@ -39,18 +39,18 @@
                           <div>
 
                             <div class="figure button_background button_width">
-                              <span class="top button_background number_style">{{firstNumberDOM}}</span>
-                              <span class="bottom button_background number_style">{{firstNumberDOM}}</span>  
+                              <span class="top button_background number_style">{{firstNumberTextInDOM}}</span>
+                              <span class="bottom button_background number_style">{{firstNumberTextInDOM}}</span>
                             </div>
 
                             <div class="figure button_background button_width">
-                              <span class="top button_background number_style">{{secondNumberDOM}}</span>
-                              <span class="bottom button_background number_style">{{secondNumberDOM}}</span>
+                              <span class="top button_background number_style">{{secondNumberTextInDOM}}</span>
+                              <span class="bottom button_background number_style">{{secondNumberTextInDOM}}</span>
                             </div>
 
                             <div class="figure button_background button_width">
-                              <span class="top button_background number_style">{{thirdNumberDOM}}</span>
-                              <span class="bottom button_background number_style">{{thirdNumberDOM}}</span>
+                              <span class="top button_background number_style">{{thirdNumberTextInDOM}}</span>
+                              <span class="bottom button_background number_style">{{thirdNumberTextInDOM}}</span>
                             </div>
 
                           </div>
@@ -63,7 +63,7 @@
 
                       </div>
                     </div>
-                    
+
                     <div class="row">
                       <button id="button_style" class="btn signin green_background_color App-margintop-p4" ng-if="domObj['updateShelters']" ng-click="updateSheltersAvailable(eventSelected);" ng-disabled="disableUpdateSheltersDOM">
                         {{ text01DOM }}
@@ -73,13 +73,13 @@
                         <span class="glyphicon glyphicon-repeat fast-right-spinner"></span>
                         {{ text02DOM }}
                       </button>
-                      
+
                       <button id="button_style" class="btn signin chartreuse_background_color App-margintop-p4" ng-if="domObj['sheltersUpdated']" style="color: black;">
                         <span class="glyphicon glyphicon-ok-circle"></span>
                         {{ text03DOM }}
                       </button>
                     </div>
-                    
+
                   </div>
                 </div>
               </div>
