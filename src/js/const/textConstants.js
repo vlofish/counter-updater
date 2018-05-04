@@ -5,6 +5,6 @@ angular.module('counterUpdater').value('textConstants', {
   NA_ARRAY           : ['n', '/', 'a'],
   SHELTERS_UPDATE    : 'Update Places.',
 	UPDATING           : 'Updating...',
-	SHELTERS_UPDATED   : 'Place updated successfully.'
+	SHELTERS_UPDATED   : 'Place Updated Successfully.'
 
 });
