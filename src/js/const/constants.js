@@ -24,7 +24,7 @@ angular.module('counterUpdater').value('constants', {
 
 	// Default event displayed in the counter
 	DEFAULT_EVENT : {
-		name    : 'Escoge el evento por actualizar:',
+		name    : 'Choose the event to update:',
 		shelter : 'n/a'
 	},
 
