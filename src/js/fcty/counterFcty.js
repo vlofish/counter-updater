@@ -1,7 +1,7 @@
 (function() {
     'use strict';
 
-    angular.module('counterUpdater').factory('counterFcty', ['webServicesSvc', 'constants', function(webServicesSvc, constants) {
+    angular.module('counterUpdater').factory('counterFcty', ['webServicesSvc', 'textConstants', 'dbConstants', function(webServicesSvc, textConstants, dbConstants) {
 
         var convertToArray = function(number) {
             var numberArray = number.toString().split('');
@@ -23,18 +23,18 @@
                     eventList.push(response[property]);
                 }
         
-                eventList.unshift(constants.DEFAULT_EVENT);
+                eventList.unshift(textConstants.DEFAULT_EVENT);
                 return eventList;
             });
         }
 
         var updateSheltersAvailable = function(eventSelectedObj, sheltersAvailable) {
-            var referencePath        = constants.REFERENCE02 + eventSelectedObj.id + '/';
+            var referencePath        = dbConstants.REFERENCE02 + eventSelectedObj.id + '/';
             eventSelectedObj.shelter = sheltersAvailable;
 
             return webServicesSvc.updateSheltersAvailable(referencePath, eventSelectedObj).then(function() {
             }).catch(function(error) {
-                return constants.ERROR_UPDATING + '\n.Error type: ' + error
+                return textConstants.ERROR_UPDATING + '\n.Error type: ' + error
             });
         }
 

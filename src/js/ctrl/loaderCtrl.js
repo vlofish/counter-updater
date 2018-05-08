@@ -1,10 +1,10 @@
 (function() {
 	'use strict';
 
-	angular.module('counterUpdater').controller('loaderCtrl', ['$scope', 'constants', function($scope, constants) {
+	angular.module('counterUpdater').controller('loaderCtrl', ['$scope', 'imgConstants', function($scope, imgConstants) {
 		
 		$scope.displayLoader = true;
-		$scope.tymLogoSrc    = constants.TYM_LOGO_ICO;
+		$scope.logoSrc       = imgConstants.MAIN_LOGO;
 
 	}]);
 })();

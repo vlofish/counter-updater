@@ -1,7 +1,7 @@
 (function() {
 	'use strict';
 
-	angular.module('counterUpdater').controller('counterCtrl', ['$scope', '$controller', '$timeout', 'constants', 'textConstants', 'counterFcty', ($scope, $controller, $timeout, constants, textConstants, counterFcty) => {
+	angular.module('counterUpdater').controller('counterCtrl', ['$scope', '$controller', '$timeout', 'domConstants', 'textConstants', 'animationConstants','counterFcty', function($scope, $controller, $timeout, domConstants, textConstants, animationConstants, counterFcty) {
 
 		/**
 		 * Global variables
@@ -21,7 +21,7 @@
 	     * If eventSelected is a real event, enable the DOM for its use.
 	     * The number of houses are updated and displayed in the DOM.
 	     */
-		$scope.displayEventInfo = (eventSelected) => {
+		$scope.displayEventInfo = function(eventSelected) {
 			let boolean = true;
 
 			if (eventSelected.id) {
@@ -36,7 +36,7 @@
 	    /**
 	     * Increase the number of houses available.
 	     */
-	    $scope.increaseNumber = () => {
+	    $scope.increaseNumber = function() {
 			if (sheltersAvailable < 1000) {
 	        	sheltersAvailable += 1;
 	        	updateUICounter(sheltersAvailable);
@@ -57,16 +57,16 @@
 	     * Update the number of places available.
 	     */
 	    $scope.updateSheltersAvailable = (eventSelected) => {
-            displayOrHideDomElements(constants.UPDATING_SHELTERS_DIVS, constants.UPDATE_SHELTERS_DIVS);
+            displayOrHideDomElements(domConstants.UPDATING_SHELTERS_DIVS, domConstants.UPDATE_SHELTERS_DIVS);
 
 			counterFcty.updateSheltersAvailable(eventSelected, sheltersAvailable).then(function() {
-				$timeout( () => {
-					displayOrHideDomElements(constants.UPDATED_SHELTERS_DIVS, constants.UPDATING_SHELTERS_DIVS);
-					$scope.events[eventSelected.id].shelter = sheltersAvailable; // Fixing for bug.
+				$timeout( function() {
+					displayOrHideDomElements(domConstants.UPDATED_SHELTERS_DIVS, domConstants.UPDATING_SHELTERS_DIVS);
+					$scope.events[eventSelected.id].shelter = sheltersAvailable;
 				}, 1000);
 
-				$timeout( () => {
-					displayOrHideDomElements(constants.UPDATE_SHELTERS_DIVS, constants.UPDATED_SHELTERS_DIVS);
+				$timeout( function() {
+					displayOrHideDomElements(domConstants.UPDATE_SHELTERS_DIVS, domConstants.UPDATED_SHELTERS_DIVS);
 				}, 2000);
 			}).catch(function(error) {
 				window.alert(error);
@@ -84,8 +84,8 @@
 			setTextToDisplayInDOM($scope);
 	    	disableDom(true);
 
-		    animationsAndDisplayabilityCtrl.setAnimation(constants.COUNTER_ANIM, constants.BOUNCE_IN);
-			animationsAndDisplayabilityCtrl.displayOrHideDomObj(constants.UPDATE_SHELTERS_DIVS, true);
+		    animationsAndDisplayabilityCtrl.setAnimation(animationConstants.COUNTER_ANIM, animationConstants.BOUNCE_IN);
+			animationsAndDisplayabilityCtrl.displayOrHideDomObj(domConstants.UPDATE_SHELTERS_DIVS, true);
 		};
 
 		init();

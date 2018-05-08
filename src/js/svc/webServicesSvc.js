@@ -1,16 +1,16 @@
 (function () {
     'use strict';
   
-    angular.module('counterUpdater').service('webServicesSvc', ['$http', '$firebaseObject', 'constants', function ($http, $firebaseObject, constants) {
+    angular.module('counterUpdater').service('webServicesSvc', ['$http', '$firebaseObject', 'dbConstants', function ($http, $firebaseObject, dbConstants) {
     
         /**
 	     * Firebase needed configuration
 	     */
-        $firebaseObject(firebase.database().ref().child(constants.REFERENCE00));
+        $firebaseObject(firebase.database().ref().child(dbConstants.REFERENCE00));
         var DB = firebase.database();
      
         var getEventList = function() {
-            return DB.ref(constants.REFERENCE01).once(constants.VAL).then(function(snapshot) {
+            return DB.ref(dbConstants.REFERENCE01).once(dbConstants.VAL).then(function(snapshot) {
                 return snapshot.val();
             });
         }
