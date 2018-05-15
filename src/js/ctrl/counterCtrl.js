@@ -41,7 +41,7 @@
 	        	sheltersAvailable += 1;
 	        	updateUICounter(sheltersAvailable);
 	      	}
-	    };
+		};
 
 	    /**
 	     * Decrease the number of houses available.
@@ -91,6 +91,18 @@
 		init();
 
 		/**
+	   * Get the names of the events and set them to the select box in the DOM.
+	   * 
+	   * TODO : There's a bug, the DOM is shown before the events are loaded.
+	   */
+		function getEventList() {
+			counterFcty.getEventList().then(function(response) {
+				$scope.events = response;
+				$scope.displayLoader = false;
+			});
+		};
+
+		/**
 		 * Sets the default DOM texts to be displayed in the DOM.
 		 */
 		function setTextToDisplayInDOM($scope) {
@@ -102,18 +114,6 @@
     		$scope.text01DOM             = textConstants.SHELTERS_UPDATE;
     		$scope.text02DOM             = textConstants.UPDATING;
     		$scope.text03DOM             = textConstants.SHELTERS_UPDATED;
-		};
-
-	  /**
-	   * Get the names of the events and set them to the select box in the DOM.
-	   * 
-	   * TODO : There's a bug, the DOM is shown before the events are loaded.
-	   */
-		function getEventList() {
-			counterFcty.getEventList().then(function(response) {
-				$scope.events = response;
-				$scope.displayLoader = false;
-			});
 		};
 
 		/**
