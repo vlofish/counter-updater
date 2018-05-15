@@ -4,7 +4,7 @@
   "description": "Counter for available places of staying.",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "karma start karma.conf.js"
   },
   "repository": {
     "type": "git",
@@ -19,5 +19,18 @@
   "bugs": {
     "url": "https://github.com/MijaelWatts/counter-updater/issues"
   },
-  "homepage": "https://github.com/MijaelWatts/counter-updater#readme"
+  "homepage": "https://github.com/MijaelWatts/counter-updater#readme",
+  "devDependencies": {
+    "angular-mocks": "^1.7.0",
+    "jasmine": "^3.1.0",
+    "karma": "^2.0.2",
+    "karma-chrome-launcher": "^2.2.0",
+    "karma-jasmine": "^1.1.2"
+  },
+  "dependencies": {
+    "@firebase/app": "^0.3.1",
+    "angular": "^1.6.9",
+    "angularfire": "^2.3.0",
+    "firebase": "^5.0.2"
+  }
 }
