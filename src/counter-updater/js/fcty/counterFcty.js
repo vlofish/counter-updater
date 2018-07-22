@@ -1,7 +1,7 @@
 (function() {
     'use strict';
 
-    angular.module('counterUpdater').factory('counterFcty', ['webServicesSvc', 'textConstants', 'dbConstants', function(webServicesSvc, textConstants, dbConstants) {
+    angular.module('counterUpdater').factory('counterFcty', ['counterSvc', 'textConstants', 'dbConstants', function(counterSvc, textConstants, dbConstants) {
 
         var convertToArray = function(number) {
             var numberArray = number.toString().split('');
@@ -16,7 +16,7 @@
         }
 
         var getEventList = function() {
-            return webServicesSvc.getEventList().then(function(response) {
+            return counterSvc.getEventList().then(function(response) {
                 var eventList = [];
 
                 for (let property in response) {
@@ -32,7 +32,7 @@
             var referencePath        = dbConstants.REFERENCE02 + eventSelectedObj.id + '/';
             eventSelectedObj.shelter = sheltersAvailable;
 
-            return webServicesSvc.updateSheltersAvailable(referencePath, eventSelectedObj).then(function() {
+            return counterSvc.updateSheltersAvailable(referencePath, eventSelectedObj).then(function() {
             }).catch(function(error) {
                 return textConstants.ERROR_UPDATING + '\n.Error type: ' + error
             });

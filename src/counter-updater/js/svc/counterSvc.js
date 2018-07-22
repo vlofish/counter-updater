@@ -1,7 +1,7 @@
 (function () {
     'use strict';
   
-    angular.module('counterUpdater').service('webServicesSvc', ['$http', '$firebaseObject', 'dbConstants', function ($http, $firebaseObject, dbConstants) {
+    angular.module('counterUpdater').service('counterSvc', ['$firebaseObject', 'dbConstants', function ($firebaseObject, dbConstants) {
     
         /**
 	     * Firebase needed configuration
@@ -26,12 +26,5 @@
             getEventList            : getEventList,
             updateSheltersAvailable : updateSheltersAvailable
         }
-      /**
-       * WS for activating anything with timeout in the controller. This is dummmy.
-       
-      this.dummyService = function() {
-        return $http.get("").then( function(response) { }, function(error) { });
-      };
-      */
     }]);
 })();

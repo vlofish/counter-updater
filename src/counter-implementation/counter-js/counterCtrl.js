@@ -7,7 +7,7 @@
 			counterSvc.getEventList().then(function(response) {
 				$scope.events = response;
 			});
-		};
+		}
 
 		getEventList();
 
