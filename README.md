@@ -11,7 +11,7 @@ Feel free to modify it in your own way.
 
   - Have node installed
   - Create a DB in firebase using the schema located in /src/js/firebase-db-example.json
-  - Add your firebase api key into the file constants.js
+  - Add your firebase api key into the main.js
 
 ### How to run
 
@@ -19,8 +19,6 @@ This applicatio uses npm and gulp to run
 
 ```sh
 $ npm install
-$ npm install -g gulp-cli
-$ gulp server
 ```
 
-gulp server task runs the whole app
+Use a live-server to run the app
