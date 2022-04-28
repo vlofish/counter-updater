@@ -139,3 +139,19 @@
 .navzilla-thumbnail:hover {
     border-color: yellowgreen !important;
 }
+
+/* New CSS Below */
+
+#vm-loader {
+    height: 100vh;
+}
+
+.vm-center-element {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.vm-flex-direction-column {
+    flex-direction: column;
+}

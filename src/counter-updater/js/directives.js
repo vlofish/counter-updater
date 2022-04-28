@@ -1,8 +1,7 @@
 angular.module('counterUpdater')
-	.directive('loaderDctv', function() {
+	.directive('vmLoader', () => {
 		return {
-			templateUrl : './views/loader.html',
-			controller  : 'loaderCtrl'
+			templateUrl: './views/vm-loader.html',
 		};
 	})
 	.directive('counterDctv', function() {
