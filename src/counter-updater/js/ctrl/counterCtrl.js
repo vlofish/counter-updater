@@ -1,7 +1,7 @@
 (function() {
 	'use strict';
 
-	angular.module('counterUpdater').controller('counterCtrl', ['$scope', '$controller', '$timeout', 'domConstants', 'textConstants', 'animationConstants','counterFcty', function($scope, $controller, $timeout, domConstants, textConstants, animationConstants, counterFcty) {
+	angular.module('counter-updater').controller('counterCtrl', ['$scope', '$controller', '$timeout', 'domConstants', 'textConstants', 'animationConstants','counterFcty', function($scope, $controller, $timeout, domConstants, textConstants, animationConstants, counterFcty) {
 
 		/**
 		 * Global variables

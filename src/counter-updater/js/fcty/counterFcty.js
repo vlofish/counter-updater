@@ -1,7 +1,7 @@
 (function() {
     'use strict';
 
-    angular.module('counterUpdater').factory('counterFcty', ['counterSvc', 'textConstants', 'dbConstants', function(counterSvc, textConstants, dbConstants) {
+    angular.module('counter-updater').factory('counterFcty', ['counterSvc', 'textConstants', 'dbConstants', function(counterSvc, textConstants, dbConstants) {
 
         var convertToArray = function(number) {
             var numberArray = number.toString().split('');

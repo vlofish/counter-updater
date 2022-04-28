@@ -1,4 +1,4 @@
-var app = angular.module('counterUpdater', ['firebase']);
+var app = angular.module('counter-updater', ['firebase']);
 
 firebase.initializeApp({ // Setup your firebase configuration here:
     'apiKey'            : "AIzaSyA4gYi1bLQQc2qNEu0-V3TSeawVwrQA3Zk",

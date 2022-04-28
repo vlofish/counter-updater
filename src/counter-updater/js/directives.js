@@ -1,4 +1,4 @@
-angular.module('counterUpdater')
+angular.module('counter-updater')
 	.directive('loaderDctv', function() {
 		return {
 			templateUrl : './views/loader.html',

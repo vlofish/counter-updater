@@ -1,7 +1,7 @@
 (function() {
 	'use strict';
 	
-	angular.module('counterUpdater').controller('animationsAndDisplayabilityCtrl', ['$scope', function ($scope){
+	angular.module('counter-updater').controller('animationsAndDisplayabilityCtrl', ['$scope', function ($scope){
 		/**
 		 * Based on properties creation through the life of the site:
 		 * The site displays specific animation for specific parts of the DOM.
