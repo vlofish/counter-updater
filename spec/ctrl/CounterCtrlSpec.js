@@ -3,7 +3,7 @@ describe('CounterCtrlSpec.', function(){
     var $rootScope;
 
     beforeEach(function() {
-        module('counter-updater');
+        module('counterUpdater');
 
         inject(function(_$controller_, _$rootScope_) {
             $controller = _$controller_;

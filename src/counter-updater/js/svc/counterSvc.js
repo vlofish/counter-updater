@@ -1,7 +1,7 @@
 (function () {
     'use strict';
   
-    angular.module('counter-updater').service('counterSvc', ['$firebaseObject', 'dbConstants', function ($firebaseObject, dbConstants) {
+    angular.module('counterUpdater').service('counterSvc', ['$firebaseObject', 'dbConstants', function ($firebaseObject, dbConstants) {
     
         /**
 	     * Firebase needed configuration
